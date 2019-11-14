@@ -5,6 +5,7 @@ import Wrapper from "./components/Wrapper";
 import friends from " ./friend.json";
 
 
+
 function shuffleFriends(array) {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
@@ -14,7 +15,7 @@ function shuffleFriends(array) {
 };
 
 class App extends Component {
-    // Set this.state
+    //     // Set this.state
     state = {
         friends,
         currentScore: 0,
@@ -23,44 +24,44 @@ class App extends Component {
         clicked: [],
     };
 
-    handleClick = id => {
-        if (this.state.clicked.indexOf(id) === -1) {
-            this.handleIncrement();
-            this.setState({ clicked: this.state.clicked.concat(id) });
-        } else {
-            this.handleReset();
-        }
-    };
+    //     handleClick = id => {
+    //         if (this.state.clicked.indexOf(id) === -1) {
+    //             this.handleIncrement();
+    //             this.setState({ clicked: this.state.clicked.concat(id) });
+    //         } else {
+    //             this.handleReset();
+    //         }
+    //     };
 
-    handleIncrement = () => {
-        const newScore = this.state.currentScore + 1;
-        this.setState({
-            currentScore: newScore,
-            rightWrong: ""
-        });
-        if (newScore >= this.state.topScore) {
-            this.setState({ topScore: newScore });
-        } else if (newScore === 12) {
-            this.setState({ rightWrong: "You win!" });
-        }
-        this.handleShuffle();
-    };
+    //     handleIncrement = () => {
+    //         const newScore = this.state.currentScore + 1;
+    //         this.setState({
+    //             currentScore: newScore,
+    //             rightWrong: ""
+    //         });
+    //         if (newScore >= this.state.topScore) {
+    //             this.setState({ topScore: newScore });
+    //         } else if (newScore === 12) {
+    //             this.setState({ rightWrong: "You win!" });
+    //         }
+    //         this.handleShuffle();
+    //     };
 
-    handleReset = () => {
-        this.setState({
-            currentScore: 0,
-            topScore: this.state.topScore,
-            clicked: []
-        });
-        this.handleShuffle();
-    };
+    //     handleReset = () => {
+    //         this.setState({
+    //             currentScore: 0,
+    //             topScore: this.state.topScore,
+    //             clicked: []
+    //         });
+    //         this.handleShuffle();
+    //     };
 
-    handleShuffle = () => {
-        let shuffledFriends = shuffleFriends(friends);
-        this.setState({ friends: shuffledFriends });
-    };
+    //     handleShuffle = () => {
+    //         let shuffledFriends = shuffleFriends(friends);
+    //         this.setState({ friends: shuffledFriends });
+    //     };
 
 
-}
+    // }
 
-export default App;
+    // export default App;
