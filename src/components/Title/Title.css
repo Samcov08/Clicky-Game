@@ -1,9 +1,11 @@
 .title {
     width: 100%;
-    text-align: right;
-    font-size: 2rem;
+    /* text-align: right; */
+    background: rgb(175, 175, 175);
     color: #444;
-    margin-bottom: 50px;
     padding-left: 3%;
     padding-right: 3%;
+    padding-bottom: 1em;
+    margin-bottom: 0;
+
 }
